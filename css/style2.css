@@ -23,7 +23,10 @@ ol li{
     position: absolute;
     right:70px;
 }
-.strike
+.completed
 {
-    text-decoration: line-through;
+   background:green;
+}
+.delete{
+    display: none;
 }

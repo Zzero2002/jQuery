@@ -5,13 +5,16 @@ $(function(){
         if(text==""){
             alert("it is empty");
         }else{
-            $("ol").append("<li>" + text + "<button id='delete'>click me</button></li> ");
+            $("ol").append("<li>" + text + "<button id='approve'>aprrove</button><button id='delete'>delete</button></li> ");
         }
         });
         
-        $(document).on("click","li",function(){
-            $(this).toggleClass('strike').fadeOut("slow");
+        $("#approve").on("click","li",function(){
+            $(this).toggleClass('completed')
         });
+        $("#delete").on("click","li",function(){
+            $(this).toggleClass('delete')
+        })
        
 
     })
