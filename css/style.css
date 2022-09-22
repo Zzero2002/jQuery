@@ -1,0 +1,13 @@
+#hole{
+    position: absolute;
+    left:0;
+}
+#twitty{
+    position: absolute;
+    right:0;
+}
+button{
+    position: absolute;
+    right:100px;
+    top:350px;
+}
