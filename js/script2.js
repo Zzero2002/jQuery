@@ -5,16 +5,18 @@ $(function(){
         if(text==""){
             alert("it is empty");
         }else{
-            $("ol").append("<li>" + text + "<button id='approve'>aprrove</button><button id='delete'>delete</button></li> ");
+            $("ol").append("<li style='margin-bottom:10px'>" + text + "<button id='approve'>aprrove</button><button id='delete'>delete</button></li> ");
         }
+       
         });
         
-        $("#approve").on("click","li",function(){
-            $(this).toggleClass('completed')
+        $("ol").on("click","#approve",function(){
+            $(this).parent("li").css("background","green");
         });
-        $("#delete").on("click","li",function(){
-            $(this).toggleClass('delete')
+        $("ol").on("click","#delete",function(){
+            $(this).parent("li").fadeOut('slow')
         })
+       
        
 
     })
